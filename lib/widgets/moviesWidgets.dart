@@ -16,9 +16,21 @@ class MoviesWidget extends StatelessWidget {
           title :Row(children: [
             SizedBox(
               width: 100,
+              child :ClipRRect(),
               child: Image.network(movie.poster),
+              BorderRadius : BorderRadius.circular(10),
             
             )
+            Flexible(child: Padding(padding: const EdgeInsets.all(8.0),
+            child:  Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(movie.title),
+                Text(movie.year)
+              ],
+            ),
+            
+            ))
           ],)
           
         
